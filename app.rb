@@ -6,13 +6,12 @@ get '/' do
 end
 
 post '/input_page' do
-  names = params[:names]
-  puts names
-  redirect 'results?input_page=' + input_page
+  studentlist = params[:studentlist]
+  redirect 'results?studentlist=' + studentlist
 end
 
 get '/results' do
-  names = params[:names]
-  puts names 
-  erb :results, locals: {names: names}
+  studentlist = params[:studentlist].split(", ")
+  pair = random_pair(studentlist)
+  erb :results, locals: {studentlist: studentlist, pair: pair}
 end
