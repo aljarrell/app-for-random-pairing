@@ -1,7 +1,20 @@
 <p>Click here to add names!</p>
+<div class="">
+  <input type="text" id="students">
+  <button type = "button" onClick="newInput()">Add Names</button>
+</div>
 
 <form id="n" method = 'post' action = '/input_page'>
-  <button type = "button" onClick="newInput()">Add Name</button>
+  <p type="text" name="studentList" id="studentList"></p>
     <input type = "submit" value = "Submit">
     <button type = "reset" value = "Reset">Reset</button>
     </form>
+
+<script type="text/javascript">
+function newInput() {
+  var studentList = document.getElementById("studentList").textContent
+  var students = document.createTextNode(document.getElementById("students").value)
+  studentList += students 
+  console.log(students)
+}
+</script>
