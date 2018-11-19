@@ -1,11 +1,17 @@
-<p>Click here to add names separated by commas!</p>
-<div class="">
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/style.css">
+<p class = "header">Click here to add names separated by commas!</p>
+</head>
+<body>
+<div class="jsbuttons">
   <input type="text" id="students">
   <button type = "button" onClick="newInput()">Add Names</button>
   <input type = "button" value = "Reset" onClick = "location.href=location.href"?>
 </div>
 
-<form id="n" method = 'post' action = '/input_page'>
+<form id="submitbuttons" method = 'post' action = '/input_page'>
   <input type = "text"  name="studentlist" id="studentList">
     <input type = "submit" value = "Submit">
     <button type = "reset" value = "Reset">Reset</button>
@@ -18,3 +24,5 @@ function newInput() {
   console.log(students)
 }
 </script>
+</body>
+</html>

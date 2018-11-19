@@ -1,0 +1,11 @@
+ html {
+  background-image: linear-gradient(red, white, blue);
+  text-align: center;
+
+}
+
+.header {
+  font-size: 30px;
+  font-weight:bold;
+  text-align: center;
+}
