@@ -15,8 +15,8 @@ get '/confirm' do
   studentlist = params[:studentlist]
   pair = random_pair(studentlist.split(", "))
   p "this is studentlist #{studentlist}"
-  if choice == "no"
-  pair = random_pair(studentlist)
+  if choice == "yes"
+    pair = pair
   end
   p "this is pair #{pair}"
   erb :confirm, locals: {studentlist: studentlist, pair: pair, choice: choice}
@@ -25,13 +25,12 @@ end
 post '/confirm' do
   choice = params[:choice]
   studentlist = params[:studentlist]
-  pair = random_pair(studentlist)
-  redirect 'results?studentlist=' + studentlist + '&pair=' + pair + '&choice=' + choice
+  redirect 'results?studentlist=' + studentlist + '&choice=' + choice
 end
 
 get '/results' do
   choice = params[:choice]
   studentlist = params[:studentlist]
-  pair = random_pair(studentlist)
+  pair = random_pair(studentlist.split(", "))
   erb :results, locals: {studentlist: studentlist, pair: pair, choice: choice}
 end
