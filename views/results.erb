@@ -1,2 +1,8 @@
 <link rel="stylesheet" href="/style.css">
-<%= pair %>
+<body>
+<% pair.each do |x| %>
+<% x.each do |x| %>
+<%= x + " " %>
+<% end %><br>
+<% end %>
+</body> 

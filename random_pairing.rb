@@ -10,7 +10,7 @@ def random_pair(names)
         arr << item
       else
         arr[rand(arr.length)].concat(item)
-      end 
+      end
     end
   end
   puts "array: #{arr}"

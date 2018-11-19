@@ -9,3 +9,11 @@
   font-weight:bold;
   text-align: center;
 }
+
+.button1 {
+  border-radius: 8px;
+}
+
+.results {
+  font-size: : 20px;
+}
