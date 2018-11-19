@@ -7,5 +7,12 @@ end
 
 post '/input_page' do
   names = params[:names]
+  puts names
   redirect 'results?input_page=' + input_page
-end 
+end
+
+get '/results' do
+  names = params[:names]
+  puts names 
+  erb :results, locals: {names: names}
+end
