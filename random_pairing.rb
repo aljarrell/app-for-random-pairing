@@ -16,3 +16,4 @@ def random_pair(names)
   puts "array: #{arr}"
   return arr
 end
+#random_pair(["cat", "dog"])

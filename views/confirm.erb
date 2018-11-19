@@ -1,0 +1,21 @@
+<h2>These are your random pairs. Would you like to keep these?</h2>
+<link rel="stylesheet" href="/style.css">
+<form method="post" action="/confirm">
+<%= pair%>
+<% pair.each do |y| %>
+<li>
+  <% y.each do |x| %>
+    <% if x == y.last %>
+    <%= x %>
+    <% else %>
+    <%= x + ", " %>
+    <% end %>
+  <% end %><br>
+  </li>
+<% end %>
+
+<input type="radio" name="choice" value= "yes" checked> Yes<br>
+<input type="radio" name="choice" value= "no"> No<br>
+<input type="hidden" name="studentlist" value="<%= pair %>">
+<input type="submit" value="Submit">
+</form>

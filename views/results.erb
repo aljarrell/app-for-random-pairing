@@ -1,8 +1,14 @@
 <link rel="stylesheet" href="/style.css">
 <body>
+  <div class="results">
+
 <% pair.each do |x| %>
-<% x.each do |x| %>
-<%= x + " " %>
-<% end %><br>
+<li>
+  <% x.each do |x| %>
+    <%= x + " " %>
+  <% end %><br>
+  </li>
 <% end %>
-</body> 
+
+</div>
+</body>
